@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'availabilities/new'
-  get 'availabilities/create'
-  get 'availabilities/show'
-  get 'availabilities/index'
-  get 'availabilities/edit'
-  get 'availabilities/update'
-  get 'availabilities/destroy'
+  get 'users/show'
+  # get 'availabilities/new'
+  # get 'availabilities/create'
+  # get 'availabilities/show'
+  # get 'availabilities/index'
+  # get 'availabilities/edit'
+  # get 'availabilities/update'
+  # get 'availabilities/destroy'
   devise_for :users
   root to: 'pages#home'
   resources :users, only: [:show] do
