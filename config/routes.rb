@@ -4,14 +4,11 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
     resources :students
     resources :senseis do
-      resources :subjects
+      resouces :sensei_subjects, only: [:create, :new, :destroy, :index]
     end
-
   end
-  resources :lessons do
-    resources :payments
-  end
-
+  resources :subjects, only: [:index]
+  resources :lessons
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
