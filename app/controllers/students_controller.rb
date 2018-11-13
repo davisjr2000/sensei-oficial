@@ -6,6 +6,11 @@ class StudentsController < ApplicationController
   end
 
   def create
+    @user = current_user
+    @sensei = @user.sensei.new
+    @sensei.user = @user
+    @sensei.save
+    authorize @user
   end
 
   def new

@@ -5,10 +5,14 @@ class SenseisController < ApplicationController
   end
 
   def create
+    @user = current_user
+
+    authorize @user
   end
 
   def new
     @user = current_user
+    @sensei = Sensei.new
     authorize @user
   end
 

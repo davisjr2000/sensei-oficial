@@ -1,7 +1,14 @@
 <h1>User: <%= @user.email %></h1>
 
-<h2>  <%= link_to new_user_sensei_path(@user) do %>
-      Seja um Sensei
-      <% end %>
+<h2>
+  <%= link_to new_user_sensei_path(@user) do %>
+    Seja um Sensei
+  <% end %>
+</h2>
+
+<h2>
+  <%= link_to new_user_student_path(@user) do %>
+    Seja um Student
+  <% end %>
 </h2>
 
