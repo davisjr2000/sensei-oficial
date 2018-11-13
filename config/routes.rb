@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'users/show'
+  # get 'users/show'
   # get 'availabilities/new'
   # get 'availabilities/create'
   # get 'availabilities/show'
@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # get 'availabilities/edit'
   # get 'availabilities/update'
   # get 'availabilities/destroy'
+  ActiveAdmin.routes(self)
+  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: 'pages#home'
   resources :users, only: [:show] do

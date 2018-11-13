@@ -1,12 +1,11 @@
 class SenseisController < ApplicationController
 
   def index
-    @students = policy_scope(Student)
+    @senseis = policy_scope(Sensei)
   end
 
   def create
     @user = current_user
-
     authorize @user
   end
 

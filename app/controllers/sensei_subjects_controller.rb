@@ -1,5 +1,6 @@
 class SenseiSubjectsController < ApplicationController
   def index
+    @senseis = policy_scope(Sensei)
   end
 
   def create

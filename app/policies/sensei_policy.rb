@@ -17,7 +17,7 @@ class SenseiPolicy < ApplicationPolicy
     true
   end
 
-  def refresh?
+  def create?
     true
   end
 
