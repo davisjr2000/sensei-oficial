@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_05_171927) do
+ActiveRecord::Schema.define(version: 2018_11_12_235541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "lessons", force: :cascade do |t|
+    t.boolean "reserved"
+    t.string "video"
+    t.bigint "sensei_id"
+    t.bigint "students_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sensei_id"], name: "index_lessons_on_sensei_id"
+    t.index ["students_id"], name: "index_lessons_on_students_id"
+  end
+
+  create_table "senseis", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_senseis_on_user_id"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_students_on_user_id"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.float "price_in_time"
+    t.string "title"
+    t.bigint "sensei_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sensei_id"], name: "index_subjects_on_sensei_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +57,15 @@ ActiveRecord::Schema.define(version: 2018_11_05_171927) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "full_name"
+    t.boolean "sensei"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "lessons", "senseis"
+  add_foreign_key "lessons", "students", column: "students_id"
+  add_foreign_key "senseis", "users"
+  add_foreign_key "students", "users"
+  add_foreign_key "subjects", "senseis"
 end

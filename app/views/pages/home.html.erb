@@ -1,4 +1,65 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+<%#=image_tag "bitcoin-island.jpg" class: "banner"  %>
+  <div class="banner-content">
+    <h1>Sensei</h1>
+    <p>The best way to have classes, learn and teach what you want,  whatever you want </p>
+    <%#= form_tag offers_path, method: :get do %>
+       <%#= select_tag "currency", options_from_collection_for_select(@currencies, "id", "name"), class: "form-control select optional", :onchange => "this.form.submit();" %>
+       <%#= text_field_tag :currency_query, params[:currency_query], class: "form-control",
+       placeholder: "Classes" %>
+    <%# end %>
+  </div>
+</div>
 
-<p>Uma pequena modificacao Hauhauhauhauh</p>
+<div class="container text-center padded features">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <%= image_tag "", class: 'card' %>
+      <h2>Be an Sensei</h2>
+      <p>create unique classes</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <%= image_tag "", class: "card"  %>
+      <h2>Select your Subject</h2>
+      <p>Choose your Sensei, and keep track of when your Sensei is avaliable</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <%= image_tag "", class: "card"  %>
+      <h2>Sensei and Student</h2>
+      <p>You can be both</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <%#= image_tag "love.png", class: "card"  %>
+      <h2>Share and love</h2>
+      <p>Join a community you will love.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="text-center padded" id="newsletter">
+  <h2>Get news from us</h2>
+  <p>Leave us your mail and get news from us</p>
+  <form class="form-inline">
+    <input type="email" placeholder="lula@institutolula.org" class="form-control">
+    <input type="submit" value="Subscribe" class="btn btn-primary btn-bordered btn-bordered-primary">
+  </form>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+        <ul class="list-inline">
+          <li><a href=""><i class="fab fa-youtube"></i></a></li>
+          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+          <li><a href=""><i class="fab fa-facebook"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-xs-8 text-right">
+        <p>This is a Marketplace challenge @ LeWagon</p>
+      </div>
+    </div>
+  </div>
+</div>
