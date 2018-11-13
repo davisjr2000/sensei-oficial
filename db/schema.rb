@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_192415) do
     t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
   end
-
+  
   create_table "lessons", force: :cascade do |t|
     t.boolean "reserved"
     t.string "video"
@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_192415) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "availabilities", "senseis"
   add_foreign_key "lessons", "senseis"
   add_foreign_key "lessons", "students", column: "students_id"
   add_foreign_key "sensei_subjects", "senseis"
