@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  # get 'users/show'
+  # get 'availabilities/new'
+  # get 'availabilities/create'
+  # get 'availabilities/show'
+  # get 'availabilities/index'
+  # get 'availabilities/edit'
+  # get 'availabilities/update'
+  # get 'availabilities/destroy'
   ActiveAdmin.routes(self)
   # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
@@ -8,6 +16,7 @@ Rails.application.routes.draw do
     resources :students
     resources :senseis do
       resources :sensei_subjects, only: [:create, :new, :destroy, :index]
+      resources :availabitities, only: [:new, :create, :index, :edit, :update, :destroy]
     end
   end
   resources :subjects, only: [:index]
