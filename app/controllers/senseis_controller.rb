@@ -1,11 +1,14 @@
 class SenseisController < ApplicationController
 
   def index
-    @students = policy_scope(Student)
+    @senseis = policy_scope(Sensei)
 
   end
 
   def create
+    raise
+    @sensei = Sensei.find(params[:id])
+    authorize @sensei
   end
 
   def new

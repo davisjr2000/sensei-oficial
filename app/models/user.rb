@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :senseis
   has_many :students
+  validates :full_name, presence: true, uniqueness: true
 end

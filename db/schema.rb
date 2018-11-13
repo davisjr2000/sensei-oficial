@@ -28,16 +28,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_192415) do
     t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
   end
-
-  create_table "availabilities", force: :cascade do |t|
-    t.bigint "sensei_id"
-    t.date "date"
-    t.integer "time", default: [], array: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["sensei_id"], name: "index_availabilities_on_sensei_id"
-  end
-
+  
   create_table "lessons", force: :cascade do |t|
     t.boolean "reserved"
     t.string "video"
