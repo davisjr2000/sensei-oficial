@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root to: 'pages#home'
   resources :users, only: [:show] do
     resources :students
     resources :senseis do
-      resouces :sensei_subjects, only: [:create, :new, :destroy, :index]
+      resources :sensei_subjects, only: [:create, :new, :destroy, :index]
     end
   end
   resources :subjects, only: [:index]
