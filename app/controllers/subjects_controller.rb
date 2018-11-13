@@ -1,5 +1,6 @@
 class SubjectsController < ApplicationController
   def index
+    @subjects = policy_scope(Subject)
   end
 
   def create

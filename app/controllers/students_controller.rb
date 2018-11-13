@@ -1,5 +1,8 @@
 class StudentsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show, :refresh]
+
   def index
+    @students = policy_scope(Student)
   end
 
   def create

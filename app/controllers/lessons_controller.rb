@@ -1,5 +1,7 @@
 class LessonsController < ApplicationController
+
   def index
+    @lessons = policy_scope(Lesson)
   end
 
   def create
