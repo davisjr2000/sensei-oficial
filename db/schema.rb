@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_12_235541) do
+ActiveRecord::Schema.define(version: 2018_11_13_133522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 2018_11_12_235541) do
     t.datetime "updated_at", null: false
     t.index ["sensei_id"], name: "index_lessons_on_sensei_id"
     t.index ["students_id"], name: "index_lessons_on_students_id"
+  end
+
+  create_table "sensei_subjects", force: :cascade do |t|
+    t.bigint "sensei_id"
+    t.bigint "subject_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sensei_id"], name: "index_sensei_subjects_on_sensei_id"
+    t.index ["subject_id"], name: "index_sensei_subjects_on_subject_id"
   end
 
   create_table "senseis", force: :cascade do |t|
@@ -41,12 +50,12 @@ ActiveRecord::Schema.define(version: 2018_11_12_235541) do
   end
 
   create_table "subjects", force: :cascade do |t|
-    t.float "price_in_time"
     t.string "title"
-    t.bigint "sensei_id"
+    t.bigint "parent_id"
+    t.float "price_per_hour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["sensei_id"], name: "index_subjects_on_sensei_id"
+    t.index ["parent_id"], name: "index_subjects_on_parent_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,7 +74,8 @@ ActiveRecord::Schema.define(version: 2018_11_12_235541) do
 
   add_foreign_key "lessons", "senseis"
   add_foreign_key "lessons", "students", column: "students_id"
+  add_foreign_key "sensei_subjects", "senseis"
+  add_foreign_key "sensei_subjects", "subjects"
   add_foreign_key "senseis", "users"
   add_foreign_key "students", "users"
-  add_foreign_key "subjects", "senseis"
 end
