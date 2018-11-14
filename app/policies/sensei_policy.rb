@@ -17,7 +17,8 @@ class SenseiPolicy < ApplicationPolicy
     true
   end
 
-  def create?
+  def new?
+
     true
   end
 

@@ -13,8 +13,4 @@ class SubjectPolicy < ApplicationPolicy
     true
   end
 
-  def refresh?
-    true
-  end
-
 end

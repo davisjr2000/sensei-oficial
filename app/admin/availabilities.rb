@@ -1,9 +1,9 @@
-ActiveAdmin.register Lesson do
+ActiveAdmin.register Availability do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-# permit_params :reserved, :video, :sensei_id, :students_id
+permit_params :sensei_id, :date, :time
 # permit_params :list, :of, :attributes, :on, :model
-permit_params :reserved, :video, :sensei_id, :students_id
+#
 # or
 #
 # permit_params do
