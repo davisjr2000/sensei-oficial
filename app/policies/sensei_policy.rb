@@ -18,7 +18,6 @@ class SenseiPolicy < ApplicationPolicy
   end
 
   def new?
-
     true
   end
 

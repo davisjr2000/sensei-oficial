@@ -1,5 +1,14 @@
-<h1>Students#new</h1>
 
-<%= simple_form_for [@user, @student] do |f| %>
-  <%= f.submit %>
-<% end %>
+<div class="container text-center">
+
+  <h1>Students#new</h1>
+  <h1>Be a Student</h1>
+  <p>When you assign in the buttom below, you become a student in our plataform, soo you are able to have all classes that you wish</p>
+
+
+  <%= simple_form_for [@user, @student] do |f| %>
+    <%= f.button :submit, value: "Be a Student", class: "btn btn-primary"  %>
+  <% end %>
+
+
+</div>

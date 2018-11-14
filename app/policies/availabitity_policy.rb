@@ -1,15 +1,11 @@
-class LessonPolicy < ApplicationPolicy
+class AvailabilityPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
 
-  def index?
-    true
-  end
-
-  def show?
+  def new?
     true
   end
 
@@ -17,7 +13,11 @@ class LessonPolicy < ApplicationPolicy
     true
   end
 
-  def new?
+  def show?
+    true
+  end
+
+  def index?
     true
   end
 
