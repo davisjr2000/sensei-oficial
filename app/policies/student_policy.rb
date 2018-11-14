@@ -17,8 +17,5 @@ class StudentPolicy < ApplicationPolicy
     true
   end
 
-  def refresh?
-    true
-  end
 
 end
