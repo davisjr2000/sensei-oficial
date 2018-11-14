@@ -1,6 +1,7 @@
 class LessonsController < ApplicationController
 
   def index
+    @user = current_user
     @lessons = policy_scope(Lesson)
   end
 
