@@ -3,6 +3,7 @@
   <p>Find me in app/views/lessons/index.html.erb</p>
 
   <% @lessons.each do |lesson| %>
+    <h2>  <%=Lesson.count  %> </h2>
     <% if lesson.reserved == true %>
       <p>Lesson is reserved</p>
       <% else %>
