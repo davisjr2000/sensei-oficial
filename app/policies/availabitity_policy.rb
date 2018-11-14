@@ -1,15 +1,15 @@
-class SenseiPolicy < ApplicationPolicy
+class AvailabilityPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
 
-  def create?
+  def new?
     true
   end
 
-  def index?
+  def create?
     true
   end
 
@@ -17,7 +17,7 @@ class SenseiPolicy < ApplicationPolicy
     true
   end
 
-  def new?
+  def index?
     true
   end
 
