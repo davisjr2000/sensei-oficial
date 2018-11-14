@@ -5,6 +5,8 @@ class LessonsController < ApplicationController
   end
 
   def create
+    @lesson = Lesson.find(params[:id])
+    authorize @lesson
   end
 
   def new

@@ -5,6 +5,10 @@ class StudentPolicy < ApplicationPolicy
     end
   end
 
+  def create?
+    true
+  end
+
   def index?
     true
   end
@@ -13,8 +17,5 @@ class StudentPolicy < ApplicationPolicy
     true
   end
 
-  def refresh?
-    true
-  end
 
 end

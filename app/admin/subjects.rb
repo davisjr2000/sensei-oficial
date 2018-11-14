@@ -1,7 +1,7 @@
 ActiveAdmin.register Subject do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
+permit_params :title, :parent_id, :price_per_hour
 # permit_params :list, :of, :attributes, :on, :model
 #
 # or
