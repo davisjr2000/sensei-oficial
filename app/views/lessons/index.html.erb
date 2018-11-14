@@ -1,2 +1,24 @@
-<h1>Lessons#index</h1>
-<p>Find me in app/views/lessons/index.html.erb</p>
+<div class="container text-center">
+  <h1>Lessons#index</h1>
+  <p>Find me in app/views/lessons/index.html.erb</p>
+
+  <% @lessons.each do |lesson| %>
+    <h2>  <%=Lesson.count  %> </h2>
+    <% if lesson.reserved == true %>
+      <p>Lesson is reserved</p>
+      <% else %>
+      <p>Lesson is not reserved</p>
+      <% end %>
+    <p><%=lesson.video  %></p>
+    <p>Id do Sensei: <%=lesson.sensei_id  %></p>
+    <p>Id do Student:  <%=lesson.student_id  %></p>
+
+  <% end %>
+
+  <% @subjects.each do |subject|  %>
+    <p> <%=subject.price_per_hour  %></p>
+
+  <% end %>
+
+
+</div>
