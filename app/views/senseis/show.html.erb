@@ -1,3 +1,4 @@
 <h1>Senseis #<%= @sensei.id %></h1>
 <p>Find me in app/views/senseis/show.html.erb</p>
 
+<%= link_to 'Defina sua disponibilidade para aulas', new_user_sensei_availabitity_path(@user, @sensei), class: 'btn btn-primary' %>

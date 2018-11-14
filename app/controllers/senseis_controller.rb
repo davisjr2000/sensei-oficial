@@ -1,7 +1,9 @@
 class SenseisController < ApplicationController
 
-  def index
-    @senseis = policy_scope(Sensei)
+  def new
+    @user = current_user
+    @sensei = Sensei.new
+    authorize @sensei
   end
 
   def create
@@ -15,19 +17,17 @@ class SenseisController < ApplicationController
     end
   end
 
-  def new
-    @user = current_user
-    @sensei = Sensei.new
-    authorize @user
-  end
-
-  def edit
-  end
-
   def show
     @user = current_user
     @sensei = Sensei.find(params[:id])
     authorize @sensei
+  end
+
+  def index
+    @senseis = policy_scope(Sensei)
+  end
+
+  def edit
   end
 
   def update
