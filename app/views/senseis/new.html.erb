@@ -1,5 +1,13 @@
-<h1>Senseis#new</h1>
+<div class="container text-center">
 
-<%= simple_form_for [@user, @sensei] do |f| %>
-  <%= f.submit %>
-<% end %>
+  <h1>Senseis#new</h1>
+  <h1>Be a Sensei</h1>
+  <p>When you assign in the buttom below, you become a Sensei in our plataform, soo you are able to teach whatever you want </p>
+
+
+  <%= simple_form_for [@user, @sensei] do |f| %>
+    <%= f.button :submit, value: "Be a Sensei", class: "btn btn-primary"  %>
+  <% end %>
+
+
+</div>
