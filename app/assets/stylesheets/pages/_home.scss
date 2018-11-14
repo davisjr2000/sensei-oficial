@@ -1,1 +1,23 @@
 // Specific CSS for your home-page
+
+.card {
+  height: 200px;
+}
+
+.pexels {
+  width: 100%;
+}
+
+.video-container {
+  position: relative;
+}
+
+.start-now {
+  position: absolute;
+  top: 500px;
+  left: 600px;
+}
+
+video::-webkit-media-controls {
+  display: none;
+}
