@@ -1,6 +1,12 @@
 <div class="banner">
-<%#=image_tag "bitcoin-island.jpg" class: "banner"  %>
   <div class="banner-content">
+  <div class="bg-video">
+    <div class="video-container">
+    <video class="pexels" src ='assets/pexels.webm' controls muted loop playinline autoplay style; background none; overflow: hidden;">
+    </video>
+    <a href="#" class="btn btn-default start-now">Start now</a>
+    </div>
+    </div>
     <h1>Sensei</h1>
     <p>The best way to have classes, learn and teach what you want,  whatever you want </p>
     <%#= form_tag offers_path, method: :get do %>
@@ -14,22 +20,22 @@
 <div class="container text-center padded features">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <%= image_tag "", class: 'card' %>
+      <%= image_tag "sensei.png", class: 'card' %>
       <h2>Be an Sensei</h2>
-      <p>create unique classes</p>
+      <p>Create unique classes</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <%= image_tag "", class: "card"  %>
+      <%= image_tag "contents.png", class: "card"  %>
       <h2>Select your Subject</h2>
       <p>Choose your Sensei, and keep track of when your Sensei is avaliable</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <%= image_tag "", class: "card"  %>
+      <%= image_tag "class.png", class: "card"  %>
       <h2>Sensei and Student</h2>
       <p>You can be both</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <%#= image_tag "love.png", class: "card"  %>
+      <%= image_tag "love_sensei.jpg", class: "card"  %>
       <h2>Share and love</h2>
       <p>Join a community you will love.</p>
     </div>
@@ -41,7 +47,7 @@
   <h2>Get news from us</h2>
   <p>Leave us your mail and get news from us</p>
   <form class="form-inline">
-    <input type="email" placeholder="lula@institutolula.org" class="form-control">
+    <input type="email" placeholder="davis@sensei.com.br" class="form-control">
     <input type="submit" value="Subscribe" class="btn btn-primary btn-bordered btn-bordered-primary">
   </form>
 </div>
@@ -58,7 +64,7 @@
         </ul>
       </div>
       <div class="col-xs-8 text-right">
-        <p>This is a Marketplace challenge @ LeWagon</p>
+        <p>This is a DemoDay challenge @ LeWagon</p>
       </div>
     </div>
   </div>
