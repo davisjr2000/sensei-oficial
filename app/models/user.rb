@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_one :sensei
   has_one :student
 
-  # validates :full_name, presence: true, uniqueness: true
+  # validates :full_name, presence: true
 end
