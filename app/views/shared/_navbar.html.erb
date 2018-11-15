@@ -6,13 +6,15 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <%= link_to "Check the classes", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "How it works", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Check the sensei's", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
       <%= link_to "Sensei", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Student", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Check the classes", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -39,7 +41,8 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "btn btn-default" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-danger button" %>
     <% end %>
   </div>
 

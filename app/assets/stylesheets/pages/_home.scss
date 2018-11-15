@@ -10,6 +10,13 @@
 
 .video-container {
   position: relative;
+
+  .banner-search {
+    position: absolute;
+    top: 55%;
+    left: 0%;
+    padding: 0 130px;
+  }
 }
 
 .start-now {
@@ -18,6 +25,12 @@
   left: 600px;
 }
 
+.button {
+  margin-left: 10px;
+}
+
 video::-webkit-media-controls {
   display: none;
 }
+
+

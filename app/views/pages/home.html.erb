@@ -1,20 +1,21 @@
 <div class="banner">
   <div class="banner-content">
-  <div class="bg-video">
-    <div class="video-container">
-      <div class="text-class"></div>
-    <video class="pexels" src ='assets/pexels.webm' controls muted loop playinline autoplay style; background none; overflow: hidden;">
-    </video>
-    <a href="users/sign_in" class="btn btn-default start-now">Start now</a>
+    <div class="bg-video">
+      <div class="video-container">
+        <video class="pexels" src='assets/pexels.webm' "controls muted loop playinline autoplay style; background none; overflow: hidden;">
+        </video>
+
+       <%= render "banner_search" %>
+      </div>
+      <h1 style="text-align: center;">Sensei</h1>
+      <p style="text-align: center;">The best way to have classes, learn and teach what you want,  whatever you want </p>
+      <br></br>
+      <%#= form_tag offers_path, method: :get do %>
+         <%#= select_tag "currency", options_from_collection_for_select(@currencies, "id", "name"), class: "form-control select optional", :onchange => "this.form.submit();" %>
+         <%#= text_field_tag :currency_query, params[:currency_query], class: "form-control",
+         placeholder: "Classes" %>
+      <%# end %>
     </div>
-    </div>
-    <h1>Sensei</h1>
-    <p>The best way to have classes, learn and teach what you want,  whatever you want </p>
-    <%#= form_tag offers_path, method: :get do %>
-       <%#= select_tag "currency", options_from_collection_for_select(@currencies, "id", "name"), class: "form-control select optional", :onchange => "this.form.submit();" %>
-       <%#= text_field_tag :currency_query, params[:currency_query], class: "form-control",
-       placeholder: "Classes" %>
-    <%# end %>
   </div>
 </div>
 
